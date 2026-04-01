@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>🎵 Music Player</h1>
+
+    <!-- Filters -->
+    <div class="filters">
+        <input type="text" id="search" placeholder="Search song...">
+
+        <select id="genreFilter">
+            <option value="all">All Genres</option>
+            <option value="Pop">Pop</option>
+            <option value="Rock">Rock</option>
+        </select>
+
+        <select id="artistFilter">
+            <option value="all">All Artists</option>
+        </select>
+    </div>
+
+    <!-- Sort Buttons -->
+    <div class="sort">
+        <button onclick="displaySongs(sortBy('title'))">Sort by Title</button>
+        <button onclick="displaySongs(sortBy('playCount'))">Sort by Plays</button>
+    </div>
+
+    <!-- Now Playing -->
+    <div id="nowPlaying">
+        <h2>Now Playing</h2>
+        <p id="currentSong">None</p>
+    </div>
+
+    <!-- Playlist -->
+    <h2>Playlist</h2>
+    <div id="playlist" class="grid"></div>
+
+    <!-- Recently Played -->
+    <h2>Recently Played</h2>
+    <ul id="recentList"></ul>
+
+    <script src="app.js"></script>
+</body>
+</html>
